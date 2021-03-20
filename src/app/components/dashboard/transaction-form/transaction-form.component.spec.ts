@@ -1,12 +1,12 @@
+import { of } from "rxjs";
 import { FormBuilder } from "@angular/forms";
 import { DebugElement } from "@angular/core";
 import { GlobalModule } from "src/app/modules/global.module";
-import { ComponentFixture, fakeAsync, TestBed, tick } from "@angular/core/testing";
+import { Transaction } from "src/app/models/transaction.model";
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { TransactionFormComponent } from "./transaction-form.component";
 import { TransactionService } from "src/app/services/transaction.service";
 import * as transactionData from '../../../../assets/mock/transactions.json';
-import { Transaction } from "src/app/models/transaction.model";
-import { of } from "rxjs";
 
 describe('TransactionFormComponent', () => {
     

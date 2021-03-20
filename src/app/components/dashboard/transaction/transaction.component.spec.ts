@@ -1,8 +1,8 @@
 import { DebugElement } from "@angular/core"
-import { ComponentFixture, TestBed } from "@angular/core/testing"
-import { Transaction } from "src/app/models/transaction.model"
 import { GlobalModule } from "src/app/modules/global.module"
+import { Transaction } from "src/app/models/transaction.model"
 import { TransactionComponent } from "./transaction.component"
+import { ComponentFixture, TestBed } from "@angular/core/testing"
 
 describe('TransactionComponent', () => {
     

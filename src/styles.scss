@@ -31,6 +31,10 @@ body {
 			outline:none !important;
 			border-bottom: 2px solid black;
 		}
+		&:disabled {
+			-webkit-text-fill-color: $text-gray;
+			opacity: 1;
+		}
 	}
 	i {
 		position: absolute;

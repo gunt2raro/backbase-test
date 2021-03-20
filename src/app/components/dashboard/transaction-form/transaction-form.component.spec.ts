@@ -1,10 +1,9 @@
 import { FormBuilder } from "@angular/forms";
 import { DebugElement } from "@angular/core";
 import { GlobalModule } from "src/app/modules/global.module";
-import { ComponentFixture, fakeAsync, TestBed, tick } from "@angular/core/testing";
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { TransactionFormComponent } from "./transaction-form.component";
 import { TransactionService } from "src/app/services/transaction.service";
-import { By } from "@angular/platform-browser";
 
 describe('TransactionFormComponent', () => {
     
@@ -36,7 +35,7 @@ describe('TransactionFormComponent', () => {
         fixture.detectChanges();
     })
     
-	it('should create transaction form', () => {
+	it("should create transaction form", () => {
 		expect(component).toBeTruthy();
     });
 
@@ -57,12 +56,11 @@ describe('TransactionFormComponent', () => {
         expect(component.form.valid).toBeFalse()
     })
     
-    it("should show review", fakeAsync(() => {
+    it("should show review", (() => {
         component.form.controls.toAccount.setValue("Southern Electric Company")
         component.form.controls.amount.setValue(50)
         const button = de.nativeElement.querySelector('#submitBtn')
         button.click()
-        tick(500)
         expect(component.reviewMode).toBeTrue()
         expect(button.nativeElement).toBeFalsy()
     }))

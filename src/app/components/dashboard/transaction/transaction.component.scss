@@ -51,6 +51,9 @@
         
     }
     @media (max-width: 959px) {
+        .date {
+            line-height: 1;
+        }
         .content {
             flex: 55%;
             p {

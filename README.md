@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     node>=12.18.2
     npm>=6.14.5
 
-## Instalation
+## Installation
 
     npm install 
 

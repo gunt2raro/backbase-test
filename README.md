@@ -2,18 +2,32 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
 
+## node version and npm version
+
+    node>=12.18.2
+    npm>=6.14.5
+
+## Instalation
+
+    npm install 
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run Development server 
+
+    npm start
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+For building the project run.
+
+    npm run build
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+For Unit Testing I used the Karma default configuration.
 
+    npm test
 
 ## Folders Structure
 
@@ -124,8 +138,26 @@ TransactionComponent; where the transaction gets defined, dispays date by month 
 
 ## Styles
 
+No CSS framework used.
+
 I defined the styles for the cards on a css class "t-card", I used this on both cards of the page.
 
 Used "control-container" class to defined form inputs.
 
 Has a header, body and footer. It is responsive.
+
+## Fonts
+
+https://fonts.google.com/specimen/Kanit
+
+## i18n
+
+Has support for spanish translation.
+
+    npm run start:es
+
+## Production server
+
+No credentials required.
+
+    https://super-test-backbase.herokuapp.com

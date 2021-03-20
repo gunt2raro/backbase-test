@@ -1,7 +1,7 @@
 <div class="t-card">
     <div class="card-header">
         <div class="img"></div>
-        <div class="title">Recent Transactions</div>
+        <div class="title" i18n="@@recentTransactions">Recent Transactions</div>
     </div>
     <div class="card-body">
         <div class="filters">
@@ -9,7 +9,8 @@
                 <input 
                     type="text"
                     [formControl]="search"
-                    placeholder="Search by Typing">
+                    i18n-placeholder="@@searchByPlaceHolder"
+                    placeholder="Search by Typing ...">
                 <i 
                     *ngIf="showClean()" 
                     (click)="cleanSearchBox()" 
@@ -17,9 +18,10 @@
                 </i>
             </div>
             <div class="tools">
-                <span>Sort by:</span> 
+                <span i18n="@@sortByLabel">Sort by:</span> 
                 <button
                     id="date"
+                    i18n="@@dateButton"
                     (click)="chooseFilter(FilterType.DATE)">
                     DATE
                     <i 
@@ -28,6 +30,7 @@
                 </button>
                 <button
                     id="beneficiary"
+                    i18n="@@beneficiaryButton"
                     (click)="chooseFilter(FilterType.BENEFICIARY)">
                     BENEFICIARY
                     <i 
@@ -36,6 +39,7 @@
                 </button>
                 <button
                     id="amount"
+                    i18n="@@amountButton"
                     (click)="chooseFilter(FilterType.AMOUNT)">
                     AMOUNT
                     <i 

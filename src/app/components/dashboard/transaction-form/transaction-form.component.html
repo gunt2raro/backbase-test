@@ -1,26 +1,26 @@
 <div class="t-card">
     <div class="card-header">
         <div class="img"></div>
-        <div class="title">Make a Transfer</div>
+        <div class="title" i18n="@@makeATransfer">Make a Transfer</div>
     </div>
     <div class="card-body">
         <form [formGroup]="form" *ngIf="!reviewMode">
             <div class="control-container">
-                <label for="fromAccount">FROM ACCOUNT</label>
+                <label for="fromAccount" i18n="@@fromAccount">FROM ACCOUNT</label>
                 <input 
                     type="text" 
                     placeholder=""
                     formControlName="fromAccount">
             </div>
             <div class="control-container">
-                <label for="toAccount">TO ACCOUNT</label>
+                <label for="toAccount" i18n="@@toAccount">TO ACCOUNT</label>
                 <input 
                     type="text" 
                     placeholder=""
                     formControlName="toAccount">
             </div>
             <div class="control-container">
-                <label for="amount">AMOUNT</label>
+                <label for="amount" i18n="@@amount">AMOUNT</label>
                 <input 
                     type="text" 
                     placeholder="$ 0.00"
@@ -29,18 +29,18 @@
             </div>
         </form>
         <div class="review" *ngIf="reviewMode">
-            <h3>Review Transaction</h3>
-            <p class="title">FROM ACCOUNT :</p>
+            <h3 i18n="@@reviewTransaction">Review Transaction</h3>
+            <p class="title" i18n="@@fromAccountLabel">FROM ACCOUNT :</p>
             <p class="sub-title">{{ fromAccountDefault }}</p>
-            <p class="title">TO ACCOUNT :</p>
+            <p class="title" i18n="@@toAccountLabel">TO ACCOUNT :</p>
             <p class="sub-title">{{ transaction?.merchant?.name }}</p>
-            <p class="title">AMOUNT :</p>
+            <p class="title" i18n="@@amountLabel">AMOUNT :</p>
             <p class="sub-title">$ {{ transaction?.transaction?.amountCurrency?.amount | number: '1.2-2' }}</p>
         </div>
     </div>
     <div class="card-footer">
-        <button id="submitBtn" class="warn" (click)="submit()" *ngIf="!reviewMode">Submit</button>
-        <button class="left-button warn double" (click)="cancel()" *ngIf="reviewMode">Go Back</button>
-        <button class="warn double" (click)="transfer()" *ngIf="reviewMode">Transfer</button>
+        <button id="submitBtn" class="warn" (click)="submit()" *ngIf="!reviewMode" i18n="@@submit">Submit</button>
+        <button class="left-button warn double" (click)="cancel()" *ngIf="reviewMode" i18n="@@goBack">Go Back</button>
+        <button class="warn double" (click)="transfer()" *ngIf="reviewMode" i18n="@@transfer">Transfer</button>
     </div>
 </div>

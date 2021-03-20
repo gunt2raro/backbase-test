@@ -5,7 +5,9 @@ html {
 		font-family: 'Kanit', sans-serif;
 	}
     background-image: url(./assets/img/background.jpg);
-    background-size: cover;
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
 }
  
 body {

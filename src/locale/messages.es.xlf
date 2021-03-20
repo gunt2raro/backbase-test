@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="makeATransfer" datatype="html">
+        <source>Make a Transfer</source>
+        <target>Hacer una Transferencia</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transaction-form/transaction-form.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fromAccount" datatype="html">
+        <source>FROM ACCOUNT</source>
+        <target>CUENTA DE EMISIÓN</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transaction-form/transaction-form.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="toAccount" datatype="html">
+        <source>TO ACCOUNT</source>
+        <target>CUENTA A RECIBIR</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transaction-form/transaction-form.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="amount" datatype="html">
+        <source>AMOUNT</source>
+        <target>CANTIDAD</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transaction-form/transaction-form.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reviewTransaction" datatype="html">
+        <source>Review Transaction</source>
+        <target>Revisar Transferencia</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transaction-form/transaction-form.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fromAccountLabel" datatype="html">
+        <source>FROM ACCOUNT :</source>
+        <target>CUENTA DE EMISIÓN :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transaction-form/transaction-form.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="toAccountLabel" datatype="html">
+        <source>TO ACCOUNT :</source>
+        <target>CUENTA A RECIBIR :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transaction-form/transaction-form.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="amountLabel" datatype="html">
+        <source>AMOUNT :</source>
+        <target>CANTIDAD :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transaction-form/transaction-form.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="submit" datatype="html">
+        <source>Submit</source>
+        <target>Aceptar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transaction-form/transaction-form.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="goBack" datatype="html">
+        <source>Go Back</source>
+        <target>Regresar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transaction-form/transaction-form.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="transfer" datatype="html">
+        <source>Transfer</source>
+        <target>Transferir</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transaction-form/transaction-form.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="recentTransactions" datatype="html">
+        <source>Recent Transactions</source>
+        <target>Transacciones Recientes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transactions/transactions.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="searchByPlaceHolder" datatype="html">
+        <source>Search by Typing ...</source>
+        <target>Buscar ...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transactions/transactions.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sortByLabel" datatype="html">
+        <source>Sort by:</source>
+        <target>Orden por:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transactions/transactions.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dateButton" datatype="html">
+        <source> DATE <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i 
+                        *ngIf=&quot;FilterType.DATE == typeOfFilter&quot; 
+                        [class]=&quot;iconsFilter[ASC ? 1: 0]&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></source>
+        <target>FECHA <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i 
+                        *ngIf=&quot;FilterType.DATE == typeOfFilter&quot; 
+                        [class]=&quot;iconsFilter[ASC ? 1: 0]&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transactions/transactions.component.html</context>
+          <context context-type="linenumber">26,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="beneficiaryButton" datatype="html">
+        <source> BENEFICIARY <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i 
+                        *ngIf=&quot;FilterType.BENEFICIARY == typeOfFilter&quot; 
+                        [class]=&quot;iconsFilter[ASC ? 1: 0]&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></source>
+        <target>BENEFICIARIO <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i 
+                        *ngIf=&quot;FilterType.BENEFICIARY == typeOfFilter&quot; 
+                        [class]=&quot;iconsFilter[ASC ? 1: 0]&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transactions/transactions.component.html</context>
+          <context context-type="linenumber">35,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="amountButton" datatype="html">
+        <source> AMOUNT <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i 
+                        *ngIf=&quot;FilterType.AMOUNT == typeOfFilter&quot; 
+                        [class]=&quot;iconsFilter[ASC ? 1: 0]&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></source>
+        <target>CANTIDAD <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i 
+                        *ngIf=&quot;FilterType.AMOUNT == typeOfFilter&quot; 
+                        [class]=&quot;iconsFilter[ASC ? 1: 0]&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/transactions/transactions.component.html</context>
+          <context context-type="linenumber">44,47</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

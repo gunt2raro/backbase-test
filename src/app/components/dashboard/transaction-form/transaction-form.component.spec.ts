@@ -52,9 +52,9 @@ describe('TransactionFormComponent', () => {
         expect(component.form.valid).toBeTrue()
     })
 
-    it("should be an invalid amount", () => {
-        component.form.controls.amount.setValue(501)
-        expect(component.form.controls.amount.valid).toBeFalse()
+    it("should have insufficient funds", () => {
+        component.form.controls.amount.setValue(5500)
+        expect(component.form.hasError('noFunds')).toBeTrue()
     })
 
     it("should be an invalid form", () => {

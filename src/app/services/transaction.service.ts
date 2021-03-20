@@ -11,7 +11,7 @@ export class TransactionService {
     private transactions: BehaviorSubject<Array<Transaction>> = new BehaviorSubject(JSON.parse(JSON.stringify(transactionData.data)) as Array<Transaction>)
     public currentTransactions = this.transactions.asObservable()
 
-    private accountBalance: BehaviorSubject<number> = new BehaviorSubject(1000)
+    private accountBalance: BehaviorSubject<number> = new BehaviorSubject(5824.76)
     public currentAccountBalance = this.accountBalance.asObservable()
 
     // create

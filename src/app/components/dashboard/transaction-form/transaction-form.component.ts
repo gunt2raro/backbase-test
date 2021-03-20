@@ -32,13 +32,12 @@ export class TransactionFormComponent implements OnInit, OnDestroy {
             .currentAccountBalance
             .subscribe(cab => {
                 this.accountBalance = cab
-                this.fromAccountDefault = `Free Checking(4692) - $ ${this.accountBalance}`
+                this.fromAccountDefault = `Free Checking(4692) - $ ${Math.round(this.accountBalance * 100) / 100}`
             })
         this.form = this.formBuilder.group({
             amount: [null, Validators.compose([
                 Validators.required, 
-                Validators.min(1),
-                Validators.max(500)
+                Validators.min(1)
             ])],
             toAccount: [
                 'Southern Electric Company', 
@@ -86,8 +85,6 @@ export class TransactionFormComponent implements OnInit, OnDestroy {
             }
         } else if(!this.form.controls.toAccount.valid) {
             alert("Please add a valid beneficiary")
-        } else if(!this.form.controls.amount.valid && this.form.controls.amount.value > 500) {
-            alert("Please add a valid amount less than 500")
         } else if(!this.form.controls.amount.valid && this.form.controls.amount.value < 1) {
             alert("Please add a valid amount greater than 0")
         } else if(this.form.hasError('noFunds')) {

@@ -79,6 +79,12 @@ export class TransactionFormComponent implements OnInit, OnDestroy {
                     accountNumber: 'SI64397745065188826',
                 }
             }
+        } else if(!this.form.controls.toAccount.valid) {
+            alert("Please add a valid beneficiary")
+        } else if(!this.form.controls.amount.valid && this.form.controls.amount.value > 500) {
+            alert("Please add a valid amount less than 500")
+        } else if(!this.form.controls.amount.valid) {
+            alert("Please add a valid amount greater than 0")
         }
     }
 

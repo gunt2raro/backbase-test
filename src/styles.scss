@@ -1,1 +1,93 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../src/assets/scss/colors.scss';
+
+html {
+	* {
+		font-family: 'Kanit', sans-serif;
+	}
+    background-image: url(./assets/img/background.jpg);
+    background-size: cover;
+}
+ 
+body {
+	margin: 0px;
+}
+
+.control-container {
+	width: 100%;
+	position: relative;
+	label {
+		font-size: 12px;
+    	font-weight: bold;
+	}
+	input {
+		width: 100%;
+		border: none;
+		color: $text-gray;
+		border-bottom: 3px solid $gray;
+		background-color: transparent;
+		height: 25px;
+		font-size: 13px;
+		&:focus {
+			outline:none !important;
+			border-bottom: 2px solid black;
+		}
+	}
+	i {
+		position: absolute;
+		right: 0;
+		top: 10px;
+		cursor: pointer;
+	}
+}
+
+.warn {
+	background-color: $orange;
+}
+
+.t-card {
+    height: fit-content;
+    background-color: white;
+	position: relative;
+
+    .card-header {
+        background-color: $blue;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+		
+        .img {
+			position: absolute;
+			left: 10px;
+			background-size: 100% 100%;
+			background-color: $blue;
+			background-blend-mode: multiply;
+		}
+		.title {
+			color: #fafcfd;
+		}
+	}
+
+	.card-body {
+        padding: 50px 15px 10px;
+		height: fit-content;
+		
+        form {
+            .control-container {
+                margin-bottom: 15px;
+            }
+		}
+    }
+
+	.card-footer {
+		.left-button {
+			position: absolute;
+			float: left;
+		}
+	}
+	
+	@media (max-width: 959px) {
+		width: 100% !important;
+	}
+}

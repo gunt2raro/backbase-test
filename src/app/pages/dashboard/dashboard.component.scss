@@ -1,0 +1,26 @@
+.container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    
+    .cont-actions {
+        flex: 40%;
+        height: fit-content;
+        padding: 10px;
+        order: 1;
+    }
+
+    .cont-list {
+        flex: 60%;
+        height: fit-content;
+        padding: 10px;
+        order: 2;
+    }
+
+    @media (max-width: 959px) {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}

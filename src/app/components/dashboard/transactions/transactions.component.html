@@ -1,0 +1,54 @@
+<div class="t-card">
+    <div class="card-header">
+        <div class="img"></div>
+        <div class="title">Recent Transactions</div>
+    </div>
+    <div class="card-body">
+        <div class="filters">
+            <div class="control-container">
+                <input 
+                    type="text"
+                    [formControl]="search"
+                    placeholder="Search by Typing">
+                <i 
+                    *ngIf="showClean()" 
+                    (click)="cleanSearchBox()" 
+                    class="fas fa-times">
+                </i>
+            </div>
+            <div class="tools">
+                <span>Sort by:</span> 
+                <button
+                    id="date"
+                    (click)="chooseFilter(FilterType.DATE)">
+                    DATE
+                    <i 
+                        *ngIf="FilterType.DATE == typeOfFilter" 
+                        [class]="iconsFilter[ASC ? 1: 0]"></i>
+                </button>
+                <button
+                    id="beneficiary"
+                    (click)="chooseFilter(FilterType.BENEFICIARY)">
+                    BENEFICIARY
+                    <i 
+                        *ngIf="FilterType.BENEFICIARY == typeOfFilter" 
+                        [class]="iconsFilter[ASC ? 1: 0]"></i>
+                </button>
+                <button
+                    id="amount"
+                    (click)="chooseFilter(FilterType.AMOUNT)">
+                    AMOUNT
+                    <i 
+                        *ngIf="FilterType.AMOUNT == typeOfFilter" 
+                        [class]="iconsFilter[ASC ? 1: 0]"></i>
+                </button>
+            </div>
+        </div>
+        <div class="data-container">
+            <Transaction 
+                *ngFor="let trans of filterdTransactions" 
+                [transaction]="trans">
+            </Transaction>
+        </div>
+    </div>
+</div>

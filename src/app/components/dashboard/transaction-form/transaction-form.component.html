@@ -1,0 +1,46 @@
+<div class="t-card">
+    <div class="card-header">
+        <div class="img"></div>
+        <div class="title">Make a Transfer</div>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="form" *ngIf="!reviewMode">
+            <div class="control-container">
+                <label for="fromAccount">FROM ACCOUNT</label>
+                <input 
+                    type="text" 
+                    placeholder=""
+                    formControlName="fromAccount">
+            </div>
+            <div class="control-container">
+                <label for="toAccount">TO ACCOUNT</label>
+                <input 
+                    type="text" 
+                    placeholder=""
+                    formControlName="toAccount">
+            </div>
+            <div class="control-container">
+                <label for="amount">AMOUNT</label>
+                <input 
+                    type="text" 
+                    placeholder="$ 0.00"
+                    inputmode="numeric"
+                    formControlName="amount">
+            </div>
+        </form>
+        <div class="review" *ngIf="reviewMode">
+            <h3>Review Transaction</h3>
+            <p class="title">FROM ACCOUNT :</p>
+            <p class="sub-title">{{ fromAccountDefault }}</p>
+            <p class="title">TO ACCOUNT :</p>
+            <p class="sub-title">{{ transaction?.merchant?.name }}</p>
+            <p class="title">AMOUNT :</p>
+            <p class="sub-title">$ {{ transaction?.transaction?.amountCurrency?.amount | number: '1.2-2' }}</p>
+        </div>
+    </div>
+    <div class="card-footer">
+        <button id="submitBtn" class="warn" (click)="submit()" *ngIf="!reviewMode">Submit</button>
+        <button class="left-button warn double" (click)="cancel()" *ngIf="reviewMode">Go Back</button>
+        <button class="warn double" (click)="transfer()" *ngIf="reviewMode">Transfer</button>
+    </div>
+</div>

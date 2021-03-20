@@ -1,0 +1,19 @@
+<div class="transaction">
+    <div class="date" [style.border-left]="borderStyle">
+        <p>{{ transaction.dates.valueDate | date: 'MMM d' }}</p>
+    </div>
+    <div class="pic">
+        <img [src]="imgPath" alt="">
+    </div>
+    <div class="content">
+        <p class="title">
+            {{ transaction.merchant.name }}
+        </p>
+        <p class="sub-title">
+            {{ transaction.transaction.type }}
+        </p>
+    </div>
+    <div class="amount">
+        <p>-${{transaction.transaction.amountCurrency.amount | number : '1.2-2'}}</p>
+    </div>
+</div>

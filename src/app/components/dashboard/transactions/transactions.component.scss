@@ -1,0 +1,62 @@
+@import '../../../../assets/scss/colors.scss';
+
+.t-card {
+    width: 750px;
+    float: left;
+    .card-header {
+        height: 50px;
+        .title {
+			margin: 10px
+        }
+        .img {
+			height: 25px;
+			width: 30px;
+			top: 10px;
+			background-image: url("../../../../assets/icons/briefcase.png");
+        }
+    }
+    .card-body {
+        .filters {
+            width: 100%;
+            display: flex;
+            padding: 15px 0px;
+            flex-direction: row;
+            text-align: right;
+            .control-container {
+                flex: 40%;
+            }
+            .tools {
+                flex: 60%;
+                padding: 0px;
+                line-height: 2;
+                span {
+                    display: inline-block;
+                    font-weight: bold;
+                    margin-right: 5px;
+                    font-size: 14px;
+                }
+                button {
+                    border: 1px solid $gray;
+                    background-color: white;
+                    padding: 5px 20px;
+                    font-size: 14px;
+                }
+            }
+            @media (max-width: 959px) {
+                flex-direction: column;
+                justify-content: space-around;
+                text-align: center;
+                .tools {
+                    span {
+                        display: block;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .data-container {
+            border-bottom: 2px solid $gray;
+            border-right: 2px solid $gray;
+        }
+    }
+}

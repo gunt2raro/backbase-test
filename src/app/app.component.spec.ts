@@ -1,35 +1,34 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { DebugElement } from '@angular/core';
 import { AppComponent } from './app.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+    let de: DebugElement
+    let component: AppComponent
+	let fixture: ComponentFixture<AppComponent>
+	
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [
+				RouterTestingModule
+			],
+			declarations: [
+				AppComponent
+			],
+		}).compileComponents();
+	});
 
-  it(`should have as title 'backbase-test'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('backbase-test');
-  });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(AppComponent)
+        component = fixture.componentInstance;
+        de = fixture.debugElement
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('backbase-test app is running!');
-  });
+        fixture.detectChanges();
+    })
+
+	it('should create the app', () => {
+		expect(component).toBeTruthy();
+	});
 });

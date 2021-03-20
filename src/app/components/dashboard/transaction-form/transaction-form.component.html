@@ -41,6 +41,6 @@
     <div class="card-footer">
         <button id="submitBtn" class="warn" (click)="submit()" *ngIf="!reviewMode" i18n="@@submit">Submit</button>
         <button class="left-button warn double" (click)="cancel()" *ngIf="reviewMode" i18n="@@goBack">Go Back</button>
-        <button class="warn double" (click)="transfer()" *ngIf="reviewMode" i18n="@@transfer">Transfer</button>
+        <button id="transactionBtn" class="warn double" (click)="transfer()" *ngIf="reviewMode" i18n="@@transfer">Transfer</button>
     </div>
 </div>

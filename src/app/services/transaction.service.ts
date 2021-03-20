@@ -8,7 +8,7 @@ import * as transactionData from '../../assets/mock/transactions.json';
 })
 export class TransactionService {
 
-    private transactions: BehaviorSubject<Array<Transaction>> = new BehaviorSubject(transactionData.data as Array<Transaction>)
+    private transactions: BehaviorSubject<Array<Transaction>> = new BehaviorSubject(JSON.parse(JSON.stringify(transactionData.data)) as Array<Transaction>)
     public currentTransactions = this.transactions.asObservable()
 
     private accountBalance: BehaviorSubject<number> = new BehaviorSubject(5824.76)

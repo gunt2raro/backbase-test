@@ -48,7 +48,12 @@ export class TransactionFormComponent implements OnInit, OnDestroy {
                 value: this.fromAccountDefault, 
                 disabled: true 
             }, Validators.required],
-        })
+        }, { validators: this.checkAmountBalance })
+    }
+
+    checkAmountBalance = (group: FormGroup) => {
+        return 500 > ( this.accountBalance - group.controls.amount.value ) ? 
+            { noFunds: true } : null
     }
 
     submit() {
@@ -83,8 +88,10 @@ export class TransactionFormComponent implements OnInit, OnDestroy {
             alert("Please add a valid beneficiary")
         } else if(!this.form.controls.amount.valid && this.form.controls.amount.value > 500) {
             alert("Please add a valid amount less than 500")
-        } else if(!this.form.controls.amount.valid) {
+        } else if(!this.form.controls.amount.valid && this.form.controls.amount.value < 1) {
             alert("Please add a valid amount greater than 0")
+        } else if(this.form.hasError('noFunds')) {
+            alert("You have insufficient funds")
         }
     }
 

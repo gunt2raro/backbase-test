@@ -23,10 +23,11 @@ body {
 		width: 100%;
 		border: none;
 		color: $text-gray;
-		border-bottom: 3px solid $gray;
+		border-bottom: 2px solid $gray;
 		background-color: transparent;
 		height: 25px;
 		font-size: 13px;
+		border-radius: 0px;
 		&:focus {
 			outline:none !important;
 			border-bottom: 2px solid black;

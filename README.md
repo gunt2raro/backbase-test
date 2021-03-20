@@ -142,7 +142,7 @@ No CSS framework used.
 
 I defined the styles for the cards on a css class "t-card", I used this on both cards of the page.
 
-Used "control-container" class to defined form inputs.
+Used "control-container" class to define form inputs.
 
 Has a header, body and footer. It is responsive.
 
@@ -160,4 +160,4 @@ Has support for spanish translation.
 
 No credentials required.
 
-    https://super-test-backbase.herokuapp.com
+https://super-test-backbase.herokuapp.com
